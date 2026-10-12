@@ -1,0 +1,77 @@
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Informe Estructural</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  max-width: 750px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #f1f3f6;
+}
+main {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+}
+h1, h2 { color: #17365d; }
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-top: 5px;
+}
+textarea { min-height: 80px; }
+button {
+  margin-top: 20px;
+  padding: 12px;
+  background: #17365d;
+  color: white;
+  border: 0;
+  cursor: pointer;
+}
+@media print {
+  body { margin: 0; background: white; }
+  main { padding: 0; }
+  button { display: none; }
+}
+</style>
+</head>
+<body>
+<main>
+<h1>INFORME DE REVISIÓN ESTRUCTURAL</h1>
+<p>GAD Municipal</p>
+
+<h2>1. Datos generales</h2>
+
+<label>Número de trámite</label>
+<input id="tramite" placeholder="Ej. EGOB 123710">
+
+<label>Propietario</label>
+<input id="propietario">
+
+<label>Ubicación del proyecto</label>
+<input id="ubicacion">
+
+<label>Número de pisos</label>
+<input id="pisos" type="number" min="1">
+
+<h2>2. Observaciones técnicas</h2>
+<textarea id="observaciones"></textarea>
+
+<h2>3. Conclusión</h2>
+<textarea id="conclusion"></textarea>
+
+<button onclick="window.print()">
+Imprimir o guardar en PDF
+</button>
+</main>
+</body>
+</html>
